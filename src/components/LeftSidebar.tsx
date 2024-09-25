@@ -1,28 +1,36 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "./ui/card";
-import { Input } from "./ui/input";
-import { Label } from "./ui/label";
-
+import ExpCardContent from "./content-cards/ExpCardContent";
+import CollapsibleCard from "./collapsibleCard";
+import Profile from "./content-cards/Profile";
 const LeftSidebar = () => {
   return (
     <div className="flex-1 overflow-y-scroll border-r-2 p-4">
-      <Card>
-        <CardHeader>
-          <CardTitle>Profile</CardTitle>
-          <CardDescription>Enter your details</CardDescription>
-        </CardHeader>
-        {/* <CardContent>
-          <div>
-            <Label htmlFor="email">Email</Label>
-            <Input id="email" type="email" placeholder="Email" />
-          </div>
-        </CardContent> */}
-      </Card>
+      <CollapsibleCard title="Profile" description="Enter your details">
+        <Profile />
+      </CollapsibleCard>
+      <CollapsibleCard
+        title="Professional Experience"
+        description="Your professional experience goes here"
+      >
+        <ExpCardContent></ExpCardContent>
+      </CollapsibleCard>
+      <CollapsibleCard
+        title="Skills"
+        description="Add your skills and keywords to increase resume match percentage."
+      >
+        <ExpCardContent></ExpCardContent>
+      </CollapsibleCard>
+      <CollapsibleCard
+        title="Projects"
+        description="Add your relevent Projects here"
+      >
+        <ExpCardContent></ExpCardContent>
+      </CollapsibleCard>
+      <CollapsibleCard
+        title="Education"
+        description="Your education details goes here"
+      >
+        <ExpCardContent></ExpCardContent>
+      </CollapsibleCard>
     </div>
   );
 };
