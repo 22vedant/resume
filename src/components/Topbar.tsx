@@ -5,7 +5,8 @@ import { Button } from "./ui/button";
 import { signIn } from "next-auth/react";
 const Topbar = () => {
   return (
-    <div className="flex w-full items-center justify-between border-b px-6 py-3">
+    <div className="container flex h-[3.5rem] w-full items-center justify-between">
+      {/* <div className="flex w-full items-center justify-between border-b px-6 py-3"> */}
       <div>
         <b>
           <i>RÉSUMÉ</i>
@@ -22,7 +23,7 @@ const Topbar = () => {
             signIn();
           }}
         >
-          Signin
+          Sign in
         </Button>
         <ModeToggle></ModeToggle>
       </div>
